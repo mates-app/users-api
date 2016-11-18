@@ -1,0 +1,105 @@
+{
+	"variables": [],
+	"info": {
+		"name": "mates-game",
+		"_postman_id": "45d39c33-ed0e-c502-7558-36afe11657f0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user-api",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "http://{{users-api}}/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"nuevo usuario\",\n    \"password\" : \"nuevapassword\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"url": "http://{{users-api}}/users/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"nuevo us uario\",\n\t\"password\" : \"nuevaspassword\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "name-match",
+					"request": {
+						"url": "http://{{users-api}}/users/name-match/nue",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "exists",
+					"request": {
+						"url": "http://{{users-api}}/users/exists/nuevo usuario",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "http://{{users-api}}/users",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"nuevo usuario\",\n\t\"password\" : \"nuevapassword\"\n} "
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
