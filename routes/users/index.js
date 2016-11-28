@@ -17,7 +17,7 @@ router.post('/login',
     UserDao.loggin,
     successResult)
 
-router.get('/name-match/:username',
+router.get('/name-match/:username?',
     UserDao.nameMatch,
     successUsers)
 
